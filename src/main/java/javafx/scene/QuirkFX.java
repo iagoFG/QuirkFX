@@ -212,13 +212,15 @@ public class QuirkFX {
 		lblgrp.setTextAlign(javafx.scene.text.TextAlignment.CENTER);
 		
 		// create another label, set properties and use the before created label as graphic
-		QuirkFX lbl = QuirkFX.newLabel().setPreset(preset2).setText("label text").setGraphic(lblgrp).setTextAlign("JUSTIFY");
+		QuirkFX lbl = QuirkFX.newLabel().setPreset(preset2).setText("label text")
+				.setGraphic(lblgrp).setTextAlign("JUSTIFY");
 		
 		// obtain the "warped" original javafx reference
 		javafx.scene.control.Label lblfx = lbl.get(javafx.scene.control.Label.class);
 		
 		// create a button with the previous labels as graphics and return directly the warped javafx object
-		javafx.scene.control.Button btnfx = QuirkFX.newButton().setGraphic(lblfx).get(javafx.scene.control.Button.class);
+		javafx.scene.control.Button btnfx = QuirkFX.newButton()
+				.setGraphic(lblfx).get(javafx.scene.control.Button.class);
 		
 		// get back the graphic property value from lbl
 		javafx.scene.control.Label lblgrpfx = lbl.get(QuirkFX.Type.GRAPHIC, javafx.scene.control.Label.class);
