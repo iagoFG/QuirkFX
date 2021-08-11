@@ -51,4 +51,5 @@ String lbltext = lbl.get(QuirkFX.Type.TEXT, String.class);
 // get the before javafx button and set a backgroundcolor style and text
 QuirkFX.warp(btnfx).setStyle("-fx-background-color:red;").setText("this is a button");
 ```
+
 Plans are finishing support for all or at least most used properties (using PipeCC precompiler) and implement simplified notation.
