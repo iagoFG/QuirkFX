@@ -1,6 +1,20 @@
 # QuirkFX
 QuirkFX *warps* JavaFX as quirk as no one has made before; here some usage examples:
 
+Planned simplified ultrapowerful context-aware Q-notation species:
+```java
+Q preset1 = Q.preset().align(Q.BASELINE_LEFT).text("default text");
+Q preset2 = Q.preset().textAlign(Q.JUSTIFY).preset(preset1);
+Q lblgrp = Q.label().preset(preset1).text("graphic label text").textAlign(Q.CENTER);
+Q lbl = Q.label().preset(preset2).text("label text").graphic(lblgrp);
+Label lblfx = lbl.get(Label.class);
+Button btnfx = Q.button().graphic(lblfx).get(Button.class);
+Label lblgrpfx = lbl.get(Q.GRAPHIC, Label.class);
+String lbltext = lbl.get(Q.TEXT, String.class);
+Q.warp(btnfx).style("-fx-background-color:red;").text("this is a button");
+```
+
+Prototype extended notation:
 ```java
 // create a preset with two properties for using later
 QuirkFX preset1 = QuirkFX.newPreset().setAlign("BASELINE_LEFT").setText("default text");
@@ -37,16 +51,4 @@ String lbltext = lbl.get(QuirkFX.Type.TEXT, String.class);
 // get the before javafx button and set a backgroundcolor style and text
 QuirkFX.warp(btnfx).setStyle("-fx-background-color:red;").setText("this is a button");
 ```
-Plans are finishing support for all or at least most used properties (using PipeCC precompiler) and, also including a simplified but superpowerful context-aware Q-notation for constructors:
-
-```java
-Q preset1 = Q.preset().align(Q.BASELINE_LEFT).text("default text");
-Q preset2 = Q.preset().textAlign(Q.JUSTIFY).preset(preset1);
-Q lblgrp = Q.label().preset(preset1).text("graphic label text").textAlign(Q.CENTER);
-Q lbl = Q.label().preset(preset2).text("label text").graphic(lblgrp);
-Label lblfx = lbl.get(Label.class);
-Button btnfx = Q.button().graphic(lblfx).get(Button.class);
-Label lblgrpfx = lbl.get(Q.GRAPHIC, Label.class);
-String lbltext = lbl.get(Q.TEXT, String.class);
-Q.warp(btnfx).style("-fx-background-color:red;").text("this is a button");
-```
+Plans are finishing support for all or at least most used properties (using PipeCC precompiler) and implement simplified notation.
