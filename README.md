@@ -41,17 +41,17 @@ QuirkFX.warp(btnfx).setStyle("-fx-background-color:red;").setText("this is a but
 ```
 QuirkFX warps (not wraps) JavaFX.
 
-Plans are finishing support for all or at least more used properties using PipeCC precompiler and, also including a simplified superpowerful Q-notation for constructors:
+Plans are finishing support for all or at least more used properties using PipeCC precompiler and, also including a simplified superpowerful context-aware Q-notation for constructors:
 
 ```java
-Q preset1 = Q.preset().setAlign(Q.BASELINE_LEFT).setText("default text");
-Q preset2 = Q.preset().setTextAlign(Q.JUSTIFY).setPreset(preset1);
-Q lblgrp = Q.label().setPreset(preset1).setText("graphic label text");
-lblgrp.setTextAlign(Q.CENTER);
-Q lbl = Q.label().setPreset(preset2).setText("label text").setGraphic(lblgrp).setTextAlign(Q.JUSTIFY);
+Q preset1 = Q.preset().align(Q.BASELINE_LEFT).text("default text");
+Q preset2 = Q.preset().textAlign(Q.JUSTIFY).preset(preset1);
+Q lblgrp = Q.label().preset(preset1).text("graphic label text");
+lblgrp.textAlign(Q.CENTER);
+Q lbl = Q.label().preset(preset2).text("label text").graphic(lblgrp).textAlign(Q.JUSTIFY);
 Label lblfx = lbl.get(Label.class);
-Button btnfx = Q.button().setGraphic(lblfx).get(Button.class);
+Button btnfx = Q.button().graphic(lblfx).get(Button.class);
 Label lblgrpfx = lbl.get(Q.GRAPHIC, Label.class);
 String lbltext = lbl.get(Q.TEXT, String.class);
-Q.warp(btnfx).setStyle("-fx-background-color:red;").setText("this is a button");
+Q.warp(btnfx).style("-fx-background-color:red;").text("this is a button");
 ```
