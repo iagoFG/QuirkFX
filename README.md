@@ -43,7 +43,7 @@ Plans are finishing support for all or at least most used properties (using Pipe
 Q preset1 = Q.preset().align(Q.BASELINE_LEFT).text("default text");
 Q preset2 = Q.preset().textAlign(Q.JUSTIFY).preset(preset1);
 Q lblgrp = Q.label().preset(preset1).text("graphic label text").textAlign(Q.CENTER);
-Q lbl = Q.label().preset(preset2).text("label text").graphic(lblgrp).textAlign(Q.JUSTIFY);
+Q lbl = Q.label().preset(preset2).text("label text").graphic(lblgrp);
 Label lblfx = lbl.get(Label.class);
 Button btnfx = Q.button().graphic(lblfx).get(Button.class);
 Label lblgrpfx = lbl.get(Q.GRAPHIC, Label.class);
