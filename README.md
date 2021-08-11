@@ -1,7 +1,5 @@
 # QuirkFX
-QuirkFX allows you develop with JavaFX as quirk as no one has made before.
-
-An image is better than a thousand words, here are some usage examples:
+QuirkFX *warps* JavaFX as quirk as no one has made before; here some usage examples:
 
 ```java
 // create a preset with two properties for using later
@@ -39,9 +37,7 @@ String lbltext = lbl.get(QuirkFX.Type.TEXT, String.class);
 // get the before javafx button and set a backgroundcolor style and text
 QuirkFX.warp(btnfx).setStyle("-fx-background-color:red;").setText("this is a button");
 ```
-QuirkFX warps (not wraps) JavaFX.
-
-Plans are finishing support for all or at least more used properties using PipeCC precompiler and, also including a simplified superpowerful context-aware Q-notation for constructors:
+Plans are finishing support for all or at least most used properties (using PipeCC precompiler) and, also including a simplified but superpowerful context-aware Q-notation for constructors:
 
 ```java
 Q preset1 = Q.preset().align(Q.BASELINE_LEFT).text("default text");
