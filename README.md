@@ -14,7 +14,7 @@ String lbltext = lbl.get(Q.TEXT, String.class);
 Q.warp(btnfx).style("-fx-background-color:red;").text("this is a button");
 ```
 
-Prototype extended notation:
+Or with prototype extended notation:
 ```java
 // create a preset with two properties for using later
 QuirkFX preset1 = QuirkFX.newPreset().setAlign("BASELINE_LEFT").setText("default text");
