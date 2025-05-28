@@ -1,7 +1,7 @@
 # QuirkFX
 QuirkFX *warps* JavaFX as quirk as no one has made before; here some usage examples:
 
-Simplified ultrapowerful context-aware Q-notation species (with standard JavaFX this dialog design would be **no less than 75 lines**):
+Simplified ultrashort context-aware Q-notation species (with standard JavaFX this dialog design would be **no less than 75 lines**):
 ```java
 Q preset1 = Q.preset().align(Q.BASELINE_LEFT).text("default text");
 Q preset2 = Q.preset().textAlign(Q.JUSTIFY).preset(preset1);
