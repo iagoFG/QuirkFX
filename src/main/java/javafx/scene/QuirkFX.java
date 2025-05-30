@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.LinkedList;
 
 /// QuirkFX allows you develop with JavaFX as quirk as no one has made before.
-/// (c) 2021 iagofg.com, licensed under LGPLv2.1 as seen in https://www.gnu.org/licenses/lgpl-2.1.html
+/// (c) 2021 iagoFG.com, licensed under MPL-2.0
 /// This library is still under development. Be kind, check some examples at the bottom...
 public class QuirkFX {
 	
